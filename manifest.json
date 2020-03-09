@@ -1,0 +1,46 @@
+{
+    "name" : "ffbutton",
+    "version" : "0.0.1",
+    "description" : "Download fanfiction quickly and easily.",
+    "manifest_version" : 2,
+    "permissions" : ["downloads"],
+    "content_scripts" : [
+        {
+            "matches" : ["https://*.fanfiction.net/s/*/*"],
+            "js" : [
+                "src/FileSaver.min.js",
+                "src/jszip.min.js",
+                "src/templates.js",
+                "src/epub.js",
+                "src/ffndownload.js",
+                "src/ffn.js"
+            ]
+        },
+        {
+            "matches" : ["https://forums.spacebattles.com/threads/*/*"],
+            "js" : [
+                "src/FileSaver.min.js",
+                "src/jszip.min.js",
+                "src/templates.js",
+                "src/epub.js",
+                "src/sbdownload.js",
+                "src/sb.js"
+            ]
+        },
+        {
+            "matches" : ["https://forums.sufficientvelocity.com/threads/*/*"],
+            "js" : [
+                "src/FileSaver.min.js",
+                "src/jszip.min.js",
+                "src/templates.js",
+                "src/epub.js",
+                "src/svdownload.js",
+                "src/sv.js"
+            ]
+        }
+   ],
+   "icons": {
+       "128": "icon128.png",
+       "48": "icon48.png"
+    }
+}
